@@ -26,6 +26,27 @@ nav ul li{
     padding: 0 12px;
 }
 
+
+
+.search-bar {
+    position: absolute; /* Allows precise positioning */
+    top: 20px; /* Distance from the top */
+    right: 50px; /* Distance from the right */
+    display: flex; /* Aligns input and button side-by-side */
+    align-items: center;
+    
+}
+
+/* Styling for the input field */
+.search-bar input[type="text"] {
+    padding: 5px 5px; /* Increases inner space (height) */
+    font-size: 12px; /* Increases font size */
+    border: 1px solid #ccc; /* Border style */
+    border-radius: 10px; /* Rounded corners */
+    width: 150px; /* Increases the width of the search box */
+}
+
+
 .brand img{
     padding: 0 8px;
     width: 44px;
