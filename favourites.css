@@ -1,0 +1,67 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: antiquewhite;
+    /* color: white; */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .top-mixes {
+    padding: 20px;
+  }
+  
+  .top-mixes h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .top-mixes .show-all {
+    font-size: 16px;
+    color: #1db954;
+    cursor: pointer;
+  }
+  
+  /* Mix Container */
+  .mix-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Mix Card */
+  .mix-card {
+    background-color: #181818;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px;
+  }
+  
+  .mix-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .mix-image img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .mix-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: white;
+  }
+  
+  .mix-card p {
+    font-size: 14px;
+    color: #b3b3b3;
+    margin: 0;
+  }
+  

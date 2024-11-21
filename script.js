@@ -1,5 +1,13 @@
 console.log("Welcome to Spotify");
 
+document.getElementById('favourites').addEventListener('click', function () {
+    window.location.href = 'favourites.html';
+});
+document.getElementById('about').addEventListener('click', function () {
+    window.location.href = 'about.html';
+});
+
+
 // Initialise the Variables
 let songIndex=1;
 let audioElement = new Audio('songs/1.mp3');
@@ -10,14 +18,23 @@ let masterSongName=document.getElementById('masterSongName');
 let songItem = Array.from(document.getElementsByClassName('songItem'));
 
 let songs=[
-    {songName: "Marriyo-Mortals" , filePath: "songs/1.mp3" , coverPath: "covers/1.jpg"},
-    {songName: "Cielo-Huma Huma" , filePath: "songs/2.mp3" , coverPath: "covers/2.jpg"},
+    {songName: "Cost" , filePath: "songs/1.mp3" , coverPath: "covers/1.jpg"},
     {songName: "Deaf Kev-Invincible" , filePath: "songs/3.mp3" , coverPath: "covers/3.jpg"},
+    {songName: "Spirit" , filePath: "songs/2.mp3" , coverPath: "covers/2.jpg"},
     {songName: "Different Heaven & Eh!de" , filePath: "songs/4.mp3" , coverPath: "covers/4.jpg"},
-    {songName: "Heroes Tonight - Janji" , filePath: "songs/5.mp3" , coverPath: "covers/5.jpg"} //,
-    // {songName: "Deaf Kev-Invincible" , filePath: "songs/6.mp3" , coverPath: "covers/6.jpg"},
-    // {songName: "Different Heaven & Ehide" , filePath: "songs/7.mp3" , coverPath: "covers/7.jpg"},
-    // {songName: "Marriyo-Mortals" , filePath: "songs/8.mp3" , coverPath: "covers/8.jpg"}
+    {songName: "Heroes Tonight - Janji" , filePath: "songs/5.mp3" , coverPath: "covers/5.jpg"}, 
+    {songName: "Let Me Love You" , filePath: "songs/6.mp3" , coverPath: "covers/6.jpg"},
+    {songName: "Happy To See You Again" , filePath: "songs/7.mp3" , coverPath: "covers/7.jpg"},
+    {songName: "Cheap Thrills" , filePath: "songs/8.mp3" , coverPath: "covers/8.jpg"},
+    {songName: "Never See You Again" , filePath: "songs/1.mp3" , coverPath: "covers/1.jpg"},
+    {songName: "Childhood Dreams" , filePath: "songs/2.mp3" , coverPath: "covers/2.jpg"},
+    {songName: "School Days" , filePath: "songs/3.mp3" , coverPath: "covers/3.jpg"},
+    {songName: "Love" , filePath: "songs/4.mp3" , coverPath: "covers/4.jpg"},
+    {songName: "Seems Beautiful" , filePath: "songs/5.mp3" , coverPath: "covers/5.jpg"}, 
+    {songName: "Happily Ever After" , filePath: "songs/6.mp3" , coverPath: "covers/6.jpg"},
+    {songName: "Let Me Love You" , filePath: "songs/7.mp3" , coverPath: "covers/7.jpg"},
+    // {songName: "Cheep Thrills" , filePath: "songs/8.mp3" , coverPath: "covers/8.jpg"},
+
 ]
 
 songItem.forEach((element , i)=> {
@@ -79,7 +96,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) =>
 })
 
 document.getElementById('next').addEventListener('click' , ()=>{
-    if(songIndex>=5){
+    if(songIndex>=15){
         songIndex=1;
     }
     else{
@@ -96,7 +113,7 @@ document.getElementById('next').addEventListener('click' , ()=>{
 
 document.getElementById('previous').addEventListener('click' , ()=>{
     if(songIndex<=1){
-        songIndex=5;
+        songIndex=15;
     }
     else{
         songIndex -= 1;
